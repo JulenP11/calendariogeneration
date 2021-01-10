@@ -8,6 +8,7 @@ main{
     margin: 3em auto;
     padding: 2em  
 }
+
 body{
     min-height:100%;
 }
@@ -21,8 +22,8 @@ body{
     "month-indicator month-indicator"
     "day-of-week day-of-week"
     "date-grid date-grid";
-    border:1px solid black;
-    border-color:#32312E ;
+    border:2px solid;
+    border-color: darkgrey ;
     background: #32312E;
     color: #C6C5C3
 
@@ -53,6 +54,7 @@ body{
 /*--------------------------------Indicador del mes---------------------------------------*/
 .month-indicator{
     grid-area: month-indicator;
+    display:grid; 
     text-indent: 1em;
     line-height: 2.5em;
 }
@@ -67,7 +69,6 @@ body{
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
     font-weight: bold;
-
 
 }
 /*--------------------------------Cuadricula de días---------------------------------------*/
@@ -84,9 +85,9 @@ body{
     color:grey
 }
 
-/*--------------------------------Dia con borde---------------------------------------------*/
+/*--------------------------------Dia 11 con borde------------------------------------------*/
 .border:hover{
-    border: 1px solid lightgray;
+    border: 1px solid white;
     color: white;
     background-color: lightgrey;
 }
