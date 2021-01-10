@@ -1,0 +1,92 @@
+html{
+    font-family: "Segoe UI";
+    line-height: 1.4;
+    font-weight: 400;   
+}
+main{
+    max-width: 400px;
+    margin: 3em auto;
+    padding: 2em  
+}
+body{
+    min-height:100vh;
+}
+
+.calendar {
+    display:grid;
+    grid: auto /15.625rem 1fr;
+    grid-template-areas:
+    "hour hour"
+    "date date"
+    "month-indicator month-indicator"
+    "day-of-week day-of-week"
+    "date-grid date-grid";
+    border:1px solid black;
+    border-color:#32312E ;
+    background: #32312E;
+    color: #C6C5C3
+
+    
+   
+}
+/*------------------------------------Hora---------------------------------------*/
+.hour{
+    grid-area: hour;
+    font-size: 300%;
+    text-indent: 8px;
+    line-height: 1em;
+}
+/*------------------------------------Fecha---------------------------------------*/
+.date{
+    grid-area: date;
+    font-size: 100%;
+    text-indent: 1em;
+    border-bottom: 1px solid darkgrey;
+    line-height: 2.5em;
+    color: lightblue
+    
+}
+.date:hover{
+    color:grey
+   
+}
+/*--------------------------------Indicador del mes---------------------------------------*/
+.month-indicator{
+    grid-area: month-indicator;
+    text-indent: 1em;
+    line-height: 2.5em;
+}
+
+.month-indicator:hover{
+    color: white
+}
+/*--------------------------------Dia de la semana---------------------------------------*/
+.day-of-week{
+    grid-area: day-of-week;
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+
+
+}
+/*--------------------------------Cuadricula de días---------------------------------------*/
+.date-grid{
+    grid-area: date-grid;
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    line-height: 2.5em;
+}
+
+/*--------------------------------Días de otros meses---------------------------------------*/
+.daygray{
+    color:grey
+}
+
+/*--------------------------------Dia con borde---------------------------------------------*/
+.border{
+    border: 1px solid lightgray;
+    color: white;
+    background-color: lightgrey;
+}
